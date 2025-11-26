@@ -13,10 +13,10 @@ VERSION="${1:?Version not specified}"
 
 if [ -z "${VERSION##v*}" ]; then
     VERSION="${VERSION##v}"
-    URL="git+https://github.com/FWDekker/mommy.git#tag=v\$pkgver"
+    URL="git+https://github.com/fwdekker/mommy.git#tag=v\$pkgver"
     REL="1"
 else
-    URL="git+https://github.com/FWDekker/mommy.git#commit=$VERSION"
+    URL="git+https://github.com/fwdekker/mommy.git#commit=$VERSION"
     REL="$(grep "pkgrel=" PKGBUILD)"
     REL="${REL##*=}"
 fi
